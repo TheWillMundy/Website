@@ -12,8 +12,8 @@
 .triangle,
 .triangle:before,
 .triangle:after {
-	width:  max(50vh, 250px);
-	height: max(50vh, 250px);
+	width: 50vh;
+	height: 50vh;
     border-top-right-radius: 30%;
 }
 

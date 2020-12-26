@@ -18,8 +18,8 @@
 	font-family: Avenir;
 	font-style: normal;
 	font-weight: 900;
-	font-size: 8rem;
-	line-height: 171px;
+	font-size: 60px;
+	/* line-height: 171px; */
 
     margin-top: 10vh;
     margin-bottom: 5vh;
@@ -29,7 +29,7 @@
 	font-family: Avenir;
 	font-style: normal;
 	font-weight: 900;
-	font-size: 4rem;
+	font-size: 35px;
     
     margin: 0;
 }
