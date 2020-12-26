@@ -1,37 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import Triangle from "../components/triangle";
-
-const links = [
-	{
-		name: "about",
-		to: "/about",
-	},
-	{
-		name: "blog",
-		to: "/blog",
-	},
-	{
-		name: "contact",
-		to: "/contact",
-	},
-	{
-		name: "more",
-		to: "/more",
-		style: {
-			fontStyle: "oblique",
-		},
-	},
-];
-
-const lines = [
-	"deloitte consultant. open source dev. ml enthusiast.",
-	"nj native. singapore ➡️ ️florida ➡️️ houston resident. travel addict.",
-	"fluent in english and python. conversational in mandarin and javascript.",
-	"frequent stock & options trader. occasional blogger. rare instagrammer.",
-	"easy blue skier. v3-4 climber. coffee and crypto connoiseur.",
-	"lifelong learner. entrepreneurial doer. tesla fan.",
-];
 
 // markup
 const IndexPage = () => {
