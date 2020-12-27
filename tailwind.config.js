@@ -9,6 +9,13 @@ module.exports = {
 				"light-blue": "#A4DEFF",
 				"light-orange": "#FFD7A8",
 			},
+			height: {
+				"50v": "50vh",
+				"75v": "75vh"
+			},
+			width: {
+				"45p": "45%"
+			}
 		},
 		fontFamily: {
 			sans: ["Avenir", "sans-serif"],

@@ -28,4 +28,5 @@ module.exports = {
       __key: "images",
     },
   ],
+  pathPrefix: "/Website"
 };
