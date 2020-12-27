@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Will Mundy's Website",
+    siteUrl: "https://www.willmundy.com"
   },
   plugins: [
     {
@@ -9,6 +10,7 @@ module.exports = {
         apiToken: "129d7d538a41540c73056020ef72e0",
       },
     },
+    "gatsby-plugin-cname",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -28,5 +30,4 @@ module.exports = {
       __key: "images",
     },
   ],
-  pathPrefix: "/Website"
 };
