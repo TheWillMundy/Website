@@ -3,11 +3,7 @@
 
 name: CI and CD
 
-on:
-  repository_dispatch:
-  push:
-    branches: 
-      - master
+on: [repository_dispatch]
 
 jobs:
   build-and-deploy:
