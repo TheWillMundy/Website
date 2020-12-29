@@ -1,7 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
     background-color: #212121;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer base {
+    h1, h2 {
+        @apply text-2xl;
+        @apply py-5;
+    }
+    h3 {
+        @apply text-xl;
+        @apply py-5;
+    }
+}

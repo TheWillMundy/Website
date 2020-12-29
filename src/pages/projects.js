@@ -1,5 +1,6 @@
 import { graphql } from "gatsby";
 import * as React from "react";
+import NavbarComponent from "../components/navbar";
 
 // markup
 const ProjectsPage = ({ data }) => {
@@ -11,13 +12,13 @@ const ProjectsPage = ({ data }) => {
 	);
 
 	// Order by order
-	projects.sort((projA, projB) => projA.order - projB.order);
+	projects.sort((projA, projB) => (projA.order > projB.order) ? 1 : -1);
 
 	return (
 		<main>
 			<title>Projects</title>
 			<div className="container flex flex-col mx-auto w-screen">
-				<p className="font-black text-3xl lg:text-6xl text-white pt-5 px-5">projects</p>
+				<NavbarComponent activePage="projects" />
 				<div className="container flex flex-row flex-wrap justify-center w-screen h-auto p-5">
 					{projects.map((project) => (
 						<div

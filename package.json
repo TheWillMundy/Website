@@ -27,6 +27,7 @@
     "gatsby-plugin-sharp": "^2.11.2",
     "gatsby-source-datocms": "^2.5.7",
     "gatsby-source-filesystem": "^2.8.1",
+    "gatsby-transformer-remark": "^2.13.1",
     "gatsby-transformer-sharp": "^2.9.0",
     "postcss": "^8.2.1",
     "react": "^16.13.1",
