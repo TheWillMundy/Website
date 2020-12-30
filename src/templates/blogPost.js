@@ -14,7 +14,7 @@ export default function BlogPost({ data }) {
 	return (
 		<div className="w-screen flex flex-col align-center text-center text-white py-5">
 			<NavbarComponent activePage="" />
-			<h1 className="font-black text-3xl pt-10">{title}</h1>
+			<h1 className="font-black text-3xl pt-10 px-10">{title}</h1>
 			<div className="font-semibold flex flex-row justify-center text-xl text-gray-300 pt-5 px-10">
 				<div
 					className="max-w-xl"
