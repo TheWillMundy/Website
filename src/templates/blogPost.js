@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react";
 import NavbarComponent from "../components/navbar";
+import "../styles/blog.module.css";
 
 export default function BlogPost({ data }) {
 	const title = data.datoCmsArticle.title;
