@@ -13,7 +13,7 @@ export default function BlogPost({ data }) {
 
 	return (
 		<div className="w-screen flex flex-col align-center text-center text-white py-5">
-            <NavbarComponent activePage="" />
+			<NavbarComponent activePage="" />
 			<h1 className="font-black text-3xl pt-10">{title}</h1>
 			<div className="font-semibold flex flex-row justify-center text-xl text-gray-300 pt-5 px-10">
 				<div
@@ -26,10 +26,12 @@ export default function BlogPost({ data }) {
 					className="max-w-2xl bg-white rounded-md text-black pt-3 pb-10 px-10"
 					dangerouslySetInnerHTML={{ __html: content }}
 				/>
-				<div
-					className="max-w-2xl bg-white rounded-md text-black my-10 py-10 px-10 leading-snug whitespace-pre-wrap"
-					dangerouslySetInnerHTML={{ __html: worksCited }}
-				/>
+				{worksCited ? (
+					<div
+						className="max-w-2xl bg-white rounded-md text-black my-10 py-10 px-10 leading-snug break-all xl:whitespace-pre-wrap"
+						dangerouslySetInnerHTML={{ __html: worksCited }}
+					/>
+				) : null}
 			</div>
 		</div>
 	);

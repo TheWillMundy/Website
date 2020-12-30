@@ -4,3 +4,10 @@ p {
 img {
     @apply py-3;
 }
+ol {
+    @apply list-inside;
+    @apply list-decimal;
+}
+li {
+    @apply py-3;
+}
