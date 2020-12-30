@@ -1,5 +1,6 @@
 import { graphql } from "gatsby";
 import React from "react";
+import NavbarComponent from "../components/navbar";
 
 export default function BlogPost({ data }) {
 	const title = data.datoCmsArticle.title;
@@ -11,8 +12,9 @@ export default function BlogPost({ data }) {
 
 	return (
 		<div className="w-screen flex flex-col align-center text-center text-white py-5">
-			<h1 className="font-black text-3xl">{title}</h1>
-			<div className="font-semibold flex flex-row justify-center text-xl text-gray-300 pt-5">
+            <NavbarComponent activePage="" />
+			<h1 className="font-black text-3xl pt-10">{title}</h1>
+			<div className="font-semibold flex flex-row justify-center text-xl text-gray-300 pt-5 px-10">
 				<div
 					className="max-w-xl"
 					dangerouslySetInnerHTML={{ __html: description }}

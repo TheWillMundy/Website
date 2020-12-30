@@ -7,7 +7,7 @@ const IndexPage = () => {
 		<main>
 			<title>Will Mundy</title>
 			<div className="container flex flex-col w-screen mx-auto text-center font-black text-white">
-				<div className="container my-5">
+				<div className="container mt-10 xl:mt-20 mb-5">
 					<p className="text-base md:text-xl m-2">everything to know about</p>
 					<p className="text-6xl md:text-9xl m-2">will mundy</p>
 					<p className="text-base md:text-xl m-2">in 30 seconds</p>

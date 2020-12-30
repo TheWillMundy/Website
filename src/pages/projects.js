@@ -6,13 +6,7 @@ import NavbarComponent from "../components/navbar";
 const ProjectsPage = ({ data }) => {
 	const projects = data.allDatoCmsProject.nodes;
 
-	// Convert technologies to JSON
-	projects.forEach(
-		(project) => (project.technologies = JSON.parse(project.technologies))
-	);
-
-	// Order by order
-	projects.sort((projA, projB) => (projA.order > projB.order) ? 1 : -1);
+	projects.sort((projA, projB) => (projA.order > projB.order ? 1 : -1));
 
 	return (
 		<main>
@@ -25,13 +19,15 @@ const ProjectsPage = ({ data }) => {
 							key={project.order}
 							className="container bg-white flex flex-col rounded-md font-black text-black text-center w-full xl:w-45p h-auto p-5 m-5"
 						>
-							<p className="text-xl xl:text-3xl">{project.title}</p>
+							<p className="text-xl xl:text-3xl">
+								{project.title}
+							</p>
 							<p className="text-base xl:text-xl py-3">
 								{project.description}
 							</p>
 							{project.technologies.length > 0 ? (
 								<ul className="list-inside list-disc text-left text-base xl:text-xl py-3">
-									{project.technologies.map((tech) => (
+									{project.technologies.split(", ").map((tech) => (
 										<li>{tech}</li>
 									))}
 								</ul>
