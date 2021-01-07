@@ -15,29 +15,41 @@ const ProjectsPage = ({ data }) => {
 			<div className="container flex flex-col mx-auto w-screen">
 				<NavbarComponent activePage="blog" />
 				<div className="container flex flex-row flex-wrap justify-center w-screen h-auto p-5">
-					{blogPosts.map((blogPost) => (
-						<div
-							key={blogPost.order}
-							className="container bg-white flex flex-col rounded-md font-black text-black w-full xl:w-1/4 h-auto p-5 m-5 cursor-pointer"
-						>
-							<Link to={`/blog/${blogPost.slug}`}>
-								<p className="text-3xl text-right">
-									{blogPost.title.toLowerCase()}
-								</p>
-								<div className="container flex flex-col justify-end flex-grow pt-5">
-									<p
-										className="text-xl text-right text-gray-500"
-										dangerouslySetInnerHTML={{
-											__html:
-												blogPost.descriptionNode
-													.childMarkdownRemark.html,
-										}}
-									/>
+					{blogPosts.map((blogPost) => {
+						const tags = blogPost.tags.map((tag) => tag.title);
+
+						return (
+							<Link
+								className="w-full xl:w-1/4 m-5 h-auto cursor-pointer"
+								to={
+									tags.includes("Medium")
+										? blogPost.link
+										: `/blog/${blogPost.slug}`
+								}
+							>
+								<div
+									key={blogPost.order}
+									className="container bg-white flex flex-col rounded-md font-black text-black h-full p-5"
+								>
+									<p className="text-3xl text-right">
+										{blogPost.title.toLowerCase()}
+									</p>
+									<div className="container flex flex-col justify-end flex-grow pt-5">
+										<p
+											className="text-xl text-right text-gray-500"
+											dangerouslySetInnerHTML={{
+												__html:
+													blogPost.descriptionNode
+														.childMarkdownRemark
+														.html,
+											}}
+										/>
+									</div>
 									<div className="flex flex-row justify-between items-baseline pt-3">
 										<div className="flex flex-row">
-											{blogPost.tags.map((tag) => (
+											{tags.map((tag) => (
 												<div className="text-xs rounded-xl border-2 border-solid border-blue-300 mx-1 px-3 py-1 lowercase">
-													{tag.title}
+													{tag}
 												</div>
 											))}
 										</div>
@@ -49,8 +61,8 @@ const ProjectsPage = ({ data }) => {
 									</div>
 								</div>
 							</Link>
-						</div>
-					))}
+						);
+					})}
 				</div>
 			</div>
 		</main>
@@ -65,6 +77,7 @@ export const query = graphql`
 				order
 				title
 				slug
+				link
 				tags {
 					title
 				}
