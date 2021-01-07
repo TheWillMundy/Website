@@ -26,6 +26,7 @@ const ProjectsPage = ({ data }) => {
 										? blogPost.link
 										: `/blog/${blogPost.slug}`
 								}
+								target="_blank"
 							>
 								<div
 									key={blogPost.order}
